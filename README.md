@@ -44,7 +44,7 @@ We use [sanity.io](https://www.sanity.io/) for the content management system. We
 $ npm install -g @sanity/cli
 ```
 
-From within the `cms/` folder you will want to initialise a new sanity project tied to your account that you login and make changes with. When prompted `Would you like to reconfigure` select `Y` and create a new sanity project, choosing to use the default dataset configuration.
+From within the `cms/` folder you want to initialise a new sanity project tied to your account. When prompted `Would you like to reconfigure` select `Y` and create a new sanity project, choosing to use the default dataset configuration.
 
 ```sh
 $ cd cms
@@ -60,15 +60,24 @@ Once you have deployed your sanity site, you’ll need the api projectId, you ca
 
 ## Deploy
 
-You can deploy to pretty much any host, however for the fastest speeds we recommend Netlify, now.sh or any static site optimised hosting that you are familiar with.
+You can deploy to any host–however for the fastest speeds we recommend Netlify, Zeit Now or any other static site hosting that you are familiar with.
 
 ### Netlify
 
-We recommend deploying using [netlify](https://www.netlify.com/), it's got a very generous free tier and serves your site at blazing speeds on their global CDN. You’ll want to push your site up to GitHub, then sign in to netlify and add a new site, it will auto-detect the build command and public folder and update every time you push up changes. For more info, check out their [excellent docs](https://docs.netlify.com/#get-started).
+If you are unsure, we recommend deploying using [netlify](https://www.netlify.com/). It has got a very generous free tier and serves your site at blazing speeds on their global CDN.
 
-### Now.sh
+To get started:
+1. Publish this project up to GitHub
+2. Sign up/sign in to netlify and add a new site
+3. You will be guided through the process of selecing your GitHub project
+4. Netlify will auto-detect the build command and public folder
+5. Done, your site should now be on Netlify and update every time you push up changes
 
-You can also deploy effortlessly to [Now](https://zeit.co/home) with a single command (once your signed up).
+For more info, check out Netlify’s [excellent docs](https://docs.netlify.com/#get-started).
+
+### Zeit Now
+
+You can also deploy effortlessly to [Now](https://zeit.co/home) with a single command.
 
 ```sh
 # Make sure it’s installed first
