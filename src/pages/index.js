@@ -9,6 +9,7 @@ import AmountPicker from "../components/AmountPicker"
 
 export default () => {
   const [amount, setAmount] = useState(null)
+  const [recurring, setRecurring] = useState(false)
   const [showPayhere, setShowPayhere] = useState(false)
   const [success, setSuccess] = useState(false)
 
@@ -32,14 +33,25 @@ export default () => {
         {amount && !validAmount &&
           <span className="block my-3 text-red-500">Please give at least $1</span>
         }
+        <label className="flex my-4 items-center text-lg" htmlFor="recurring-donation">
+          <input
+            id="recurring-donation"
+            type="checkbox"
+            className="mr-4"
+            checked={recurring}
+            onChange={e => setRecurring(e.target.checked)}
+          />
+          Make it a regular gift
+        </label>
         { validAmount ?
           <button
-            className="mt-6 w-full bg-green-500 text-white font-semibold uppercase tracking-wider p-4 text-lg outline-none"
+            className="w-full bg-green-500 text-white font-semibold uppercase tracking-wider p-4 text-lg outline-none"
             onClick={() => {
               setShowPayhere(true)
             }}
           >
             Donate ${amount}
+            {recurring && ` per month`}
           </button>
         :
           <div
@@ -69,7 +81,7 @@ export default () => {
             console.log("Doing nothing, failed.")
           }
         }}
-        embedURL={siteConfig.payherePlanURL}
+        embedURL={recurring ? siteConfig.payherePlanURLmonthly : siteConfig.payherePlanURLoneOff}
       />
     </Layout>
   )

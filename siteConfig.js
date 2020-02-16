@@ -6,5 +6,6 @@ module.exports = {
   prefix: '/',
   author: '@peteyhawkins',
   twitter: '@PayHerePayments',
-  payherePlanURL: 'https://sandbox.payhere.co/payhere-examples/charity-run-be89d5ab-731b-4e51-a750-34d3faca63d9',
+  payherePlanURLoneOff: 'https://sandbox.payhere.co/payhere-examples/charity-run-be89d5ab-731b-4e51-a750-34d3faca63d9',
+  payherePlanURLmonthly: 'https://sandbox.payhere.co/payhere-examples/charity-run-monthly',
 }
