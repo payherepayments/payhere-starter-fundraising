@@ -28,8 +28,8 @@ That’s it, you can now edit the content in `./siteConfig.js` and you’ll be o
 
 You will need to signup for a free* [Payhere account](https://app.payhere.co/signups/new?plan=starter). Once you are setup you’ll want to create two plans:
 
-1. Create a plan, select the **Donation** option and give it a helpful name. Choose 'One-off' type.
-2. Create a second plan, select the **Donation** option and give it a helpful name. This time, choosing the 'Recurring' type and set billing interval to 'Month'.
+1. Create a plan, select the **Donation** option and give it a helpful name. Choose the **One-off** type.
+2. Create a second plan, selecting **Donation** again, this time choosing the **Recurring** type and set billing interval to **Month**.
 
 Once you have your plans, copy the links to these plans and update the values inside `./siteConfig.js`.
 
@@ -37,7 +37,7 @@ Once you have your plans, copy the links to these plans and update the values in
 
 ## CMS setup
 
-We use [sanity.io](https://www.sanity.io/) for the content management system. We have the sanity studio configured and ready to go, you just need to set it up in within your own sanity account following the steps below.
+We use [sanity.io](https://www.sanity.io/) for the content management system. We have sanity studio configured and ready to go, you just need to set it up within your sanity account following the steps below.
 
 ```sh
 # Make sure you have the sanity.io command line tools installed
@@ -60,18 +60,18 @@ Once you have deployed your sanity studio, you’ll need the api projectId, you 
 
 ## Deploy
 
-You can deploy to any host–however for the fastest speeds we recommend Netlify, Zeit Now or any other static site hosting that you are familiar with.
+You can deploy to any host however, for the fastest speeds we recommend Netlify, Zeit Now or any other static-site hosting that you are familiar with.
 
 ### Netlify
 
-If you are unsure, we recommend deploying using [netlify](https://www.netlify.com/). It has got a very generous free tier and serves your site at blazing speeds on their global CDN.
+If you are unsure, we recommend deploying using [netlify](https://www.netlify.com/). It has a generous free tier and serves your site at blazing speeds on a global CDN.
 
 To get started:
-1. Publish this project up to GitHub
+1. Publish this project to GitHub
 2. Sign up/sign in to netlify and add a new site
 3. You will be guided through the process of selecing your GitHub project
-4. Netlify will auto-detect the build command and public folder
-5. Done, your site should now be on Netlify and update every time you push up changes
+4. Netlify will auto-detect the build command and public folder for Gatsby
+5. Done, your site should now be on Netlify and update every time you push changes
 
 For more info, check out Netlify’s [excellent docs](https://docs.netlify.com/#get-started).
 
