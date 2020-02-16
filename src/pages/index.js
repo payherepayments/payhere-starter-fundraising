@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
   const validAmount = amount && amount >= 1
 
   return (
-    <Layout title={title} mainImage={mainImage}>
+    <Layout mainImage={mainImage}>
       <h1 className="font-semibold text-3xl text-gray-800 mb-4">
         {title}
       </h1>
