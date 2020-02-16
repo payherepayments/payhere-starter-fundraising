@@ -1,0 +1,52 @@
+{
+  "name": "payhere-fundraising-starter",
+  "private": true,
+  "description": "A fundraising starter, allowing you to collect online donations",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "circular-std": "^1.0.3",
+    "gatsby": "^2.19.7",
+    "gatsby-plugin-manifest": "^2.2.41",
+    "gatsby-plugin-portal": "^1.0.7",
+    "gatsby-plugin-postcss": "^2.1.20",
+    "gatsby-plugin-purgecss": "^4.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-transformer-sharp": "^2.3.14",
+    "payhere-embed-sdk": "^0.5.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "tailwindcss": "^1.2.0",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ]
+}
