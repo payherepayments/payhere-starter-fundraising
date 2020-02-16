@@ -1,6 +1,6 @@
 # Payhere fundraising starter
 
-A funraising starter, built using [Gatsby](https://www.gatsbyjs.org) and [Paynere](https://payhere.co). It allows you to easily create a nice, mobile-optimised website and be collecting one-off and recurring donations.
+A funraising website, built using [Gatsby](https://www.gatsbyjs.org) and [Paynere](https://payhere.co). It allows you to easily create a nice, mobile-optimised website and be collecting one-off and recurring donations.
 
 [Live demo](https://my-fundraising-page.netlify.com/)
 
