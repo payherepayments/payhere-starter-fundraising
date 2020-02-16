@@ -1,6 +1,6 @@
 # Payhere fundraising starter
 
-This is a funraising page starter, built using Gatsby and Paynere. It allows you to easily push up a nice mobile optimised website to collect donations using Payhere.
+A funraising starter, built using Gatsby and Paynere. It allows you to easily push up a nice, mobile optimised website to collect one-off and recurring donations.
 
 [Live demo](https://my-fundraising-page.netlify.com/)
 
