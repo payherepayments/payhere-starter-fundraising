@@ -1,16 +1,16 @@
 # Payhere fundraising starter
 
-A funraising starter, built using Gatsby and Paynere. It allows you to easily push up a nice, mobile optimised website to collect one-off and recurring donations.
+A funraising starter, built using [Gatsby](https://www.gatsbyjs.org) and [Paynere](https://payhere.co). It allows you to easily create a nice, mobile-optimised website and be collecting one-off and recurring donations.
 
 [Live demo](https://my-fundraising-page.netlify.com/)
 
-### Example
+### Example screenshot
 
 ![Funraising example](./fundraiser-example.png)
 
-### Fully managed
+### Prefer fully managed?
 
-If you don’t have the technical know-how, or would prefer that we do the heavy lifting you can [contact us](mailto:hello@payhere.co) and we’ll set everything up for you, tweak the colours and images to match your brand and give you a content management system login to tweak your content whenever you want. *We’ll charge you for the domain name if you don’t have one and a small monthly fee for setup and hosting.*
+If you don’t have the technical know-how, or would prefer that we do the heavy lifting for you, [contact us](mailto:hello@payhere.co) and we’ll set everything up, tweak the colours and images to match your brand, and give you a content management system to update your content whenever you want. *We’ll charge you for the domain name (if you don’t already have one) and a small monthly fee for the setup and hosting.*
 
 ## Getting started
 
