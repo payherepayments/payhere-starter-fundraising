@@ -35,9 +35,15 @@ export default {
         hotspot: true
       }
     },
+    {
+      name: 'thanks',
+      title: 'Thank you message',
+      type: 'string'
+    },
   ],
 
   initialValue: {
-    title: '5km run for cancer research'
+    title: '5km run for Cancer Research',
+    thanks: 'Thanks for your support!'
   }
 }
