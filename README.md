@@ -44,7 +44,11 @@ We use [sanity.io](https://www.sanity.io/) for the content management system. We
 $ npm install -g @sanity/cli
 $ cd cms
 $ sanity deploy
+# Deploy graphql endpoint (required for gatsby-source-sanity)
+$ sanity graphql deploy
 ```
+
+Once you have deployed your sanity site, you’ll need the project ID, you can find it inside of `./cms/sanity.json`. Next update the `./siteConfig.js` file with your sanity project ID.
 
 ## Deploy
 

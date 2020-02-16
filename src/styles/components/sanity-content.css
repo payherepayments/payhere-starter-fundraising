@@ -1,0 +1,9 @@
+.sanity-content {
+  p, h2, blockquote {
+    @apply mb-4;
+  }
+
+  h2 {
+    @apply text-xl font-bold mt-6;
+  }
+}

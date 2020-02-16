@@ -1,13 +1,40 @@
 import React, { useState } from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+import BlockContent from "@sanity/block-content-to-react"
 import "payhere-embed-sdk/dist/react.css"
 import Payhere from "payhere-embed-sdk/dist/react"
 
 import siteConfig from "../../siteConfig"
 import Layout from "../components/Layout"
-import avatarImg from "../images/avatar.jpg"
 import AmountPicker from "../components/AmountPicker"
 
-export default () => {
+export const pageQuery = graphql`
+  {
+    sanitySiteContent {
+      title
+      author
+      _rawBody
+      mainImage {
+        asset {
+          fluid(maxWidth: 1200) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
+      avatar {
+        asset {
+          fixed(height: 64, width: 64) {
+            ...GatsbySanityImageFixed
+          }
+        }
+      }
+    }
+  }
+`
+
+const IndexPage = ({ data }) => {
+  const { title, author, avatar, mainImage, _rawBody } = data.sanitySiteContent
   const [amount, setAmount] = useState(null)
   const [recurring, setRecurring] = useState(false)
   const [showPayhere, setShowPayhere] = useState(false)
@@ -16,18 +43,21 @@ export default () => {
   const validAmount = amount && amount >= 1
 
   return (
-    <Layout>
+    <Layout title={title} mainImage={mainImage}>
       <h1 className="font-semibold text-3xl text-gray-800 mb-4">
-        5km run for cancer research
+        {title}
       </h1>
       <div className="flex items-center mb-8">
-        <img src={avatarImg} alt="Alex" className="w-16 h-16 rounded-full mr-4" />
-        <span className="font-semibold text-lg">Alex Baldwin</span>
+        <Img fixed={avatar.asset.fixed} alt={author} className="w-16 h-16 rounded-full mr-4" />
+        <span className="font-semibold text-lg">{author}</span>
       </div>
-      <div className="leading-relaxed text-lg mb-8">
-        <p className="mb-4">Help me beat cancer by sponsoring my 5km run. I’ve been training like crazy and really want to reach my goal of $2,000, any and all help is very much appreciated!</p>
-        <p>All proceeds are going directly to <strong>Cancer Research</strong>.</p>
-      </div>
+      <BlockContent
+        className="sanity-content leading-relaxed text-lg mb-8"
+        blocks={_rawBody}
+        renderContainerOnSingleChild={true}
+        projectId={siteConfig.sanitySiteId}
+        dataset={siteConfig.sanityDataset}
+      />
       <div>
         <AmountPicker value={amount} onChange={setAmount} />
         {amount && !validAmount &&
@@ -86,3 +116,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default IndexPage

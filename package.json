@@ -14,14 +14,17 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.7",
     "circular-std": "^1.0.3",
     "gatsby": "^2.19.7",
+    "gatsby-image": "^2.2.41",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-portal": "^1.0.7",
     "gatsby-plugin-postcss": "^2.1.20",
     "gatsby-plugin-purgecss": "^4.0.1",
     "gatsby-plugin-react-helmet": "^3.1.22",
     "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-source-sanity": "^5.0.5",
     "gatsby-transformer-sharp": "^2.3.14",
     "payhere-embed-sdk": "^0.5.5",
     "react": "^16.12.0",
@@ -46,7 +49,6 @@
   "browserslist": [
     "defaults",
     "not IE 11",
-    "not IE_Mob 11",
-    "maintained node versions"
+    "not IE_Mob 11"
   ]
 }
