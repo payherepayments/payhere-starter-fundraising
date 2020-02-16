@@ -1,6 +1,6 @@
 # Payhere fundraising starter
 
-A funraising website, built using [Gatsby](https://www.gatsbyjs.org), [Paynere](https://payhere.co) and [Sanity.io](https://www.sanity.io/). It allows you to easily create a nice, mobile-optimised website and collect one-off and recurring donations for your charity or funraising event.
+A funraising website, built using [Gatsby](https://www.gatsbyjs.org), [Payhere](https://payhere.co) and [Sanity.io](https://www.sanity.io/). It allows you to easily create a nice, mobile-optimised website and collect one-off and recurring donations for your charity or funraising event.
 
 [Live demo](https://fundraising.now.sh/)
 
