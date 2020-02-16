@@ -58,39 +58,45 @@ const IndexPage = ({ data }) => {
         projectId={siteConfig.sanitySiteId}
         dataset={siteConfig.sanityDataset}
       />
-      <div>
-        <AmountPicker value={amount} onChange={setAmount} />
-        {amount && !validAmount &&
-          <span className="block my-3 text-red-500">Please give at least $1</span>
-        }
-        <label className="flex mt-4 items-center text-lg" htmlFor="recurring-donation">
-          <input
-            id="recurring-donation"
-            type="checkbox"
-            className="mr-4"
-            checked={recurring}
-            onChange={e => setRecurring(e.target.checked)}
-          />
-          Make it a regular gift
-        </label>
-        { validAmount ?
-          <button
-            className="mt-6 w-full bg-green-500 text-white font-semibold uppercase tracking-wider p-4 text-lg outline-none"
-            onClick={() => {
-              setShowPayhere(true)
-            }}
-          >
-            Donate ${amount}
-            {recurring && ` per month`}
-          </button>
-        :
-          <div
-            className="mt-6 w-full bg-green-300 text-white font-semibold text-center uppercase tracking-wider p-4 text-lg"
-          >
-            Select donation amount
-          </div>
-        }
-      </div>
+      {success ?
+        <div className="px-4 py-8 rounded-lg border-2 border-green-500 text-green-500 text-white text-center">
+          <h2 className="text-xl font-semibold">Thanks for your support!</h2>
+        </div>
+      :
+        <div>
+          <AmountPicker value={amount} onChange={setAmount} />
+          {amount && !validAmount &&
+            <span className="block my-3 text-red-500">Please give at least $1</span>
+          }
+          <label className="flex mt-4 items-center text-lg" htmlFor="recurring-donation">
+            <input
+              id="recurring-donation"
+              type="checkbox"
+              className="mr-4"
+              checked={recurring}
+              onChange={e => setRecurring(e.target.checked)}
+            />
+            Make it a regular gift
+          </label>
+          { validAmount ?
+            <button
+              className="mt-6 w-full bg-green-500 text-white font-semibold uppercase tracking-wider p-4 text-lg outline-none"
+              onClick={() => {
+                setShowPayhere(true)
+              }}
+            >
+              Donate ${amount}
+              {recurring && ` per month`}
+            </button>
+          :
+            <div
+              className="mt-6 w-full bg-green-300 text-white font-semibold text-center uppercase tracking-wider p-4 text-lg"
+            >
+              Select donation amount
+            </div>
+          }
+        </div>
+      }
       <Payhere
         selector="#payhere-modal"
         open={showPayhere}
