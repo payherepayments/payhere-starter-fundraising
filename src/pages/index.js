@@ -12,6 +12,8 @@ export default () => {
   const [showPayhere, setShowPayhere] = useState(false)
   const [success, setSuccess] = useState(false)
 
+  const validAmount = amount && amount >= 1
+
   return (
     <Layout>
       <h1 className="font-semibold text-3xl text-gray-800 mb-4">
@@ -27,15 +29,25 @@ export default () => {
       </div>
       <div>
         <AmountPicker value={amount} onChange={setAmount} />
-        <button
-          className="mt-6 w-full bg-green-500 disabled:opacity-75 text-white font-semibold uppercase tracking-wider p-4 text-lg outline-none"
-          onClick={() => {
-            setShowPayhere(true)
-          }}
-          disabled={!amount || amount < 1}
-        >
-          Donate now
-        </button>
+        {amount && !validAmount &&
+          <span className="block my-3 text-red-500">Please give at least $1</span>
+        }
+        { validAmount ?
+          <button
+            className="mt-6 w-full bg-green-500 text-white font-semibold uppercase tracking-wider p-4 text-lg outline-none"
+            onClick={() => {
+              setShowPayhere(true)
+            }}
+          >
+            Donate ${amount}
+          </button>
+        :
+          <div
+            className="mt-6 w-full bg-green-300 text-white font-semibold text-center uppercase tracking-wider p-4 text-lg"
+          >
+            Select donation amount
+          </div>
+        }
       </div>
       <Payhere
         selector="#payhere-modal"
