@@ -28,19 +28,19 @@ That’s it, you can now edit the content in `./siteConfig.js` and you’ll be o
 
 You will need to signup for a free* [Payhere account](https://app.payhere.co/signups/new?plan=starter). Once you are setup you’ll want to create two plans:
 
-1. Create a plan, select the Donation plan type and give it a helpful name. Choose the donation type 'One-off'.
-2. Create a second plan, select the Donation plan type and give it a helpful name. This time, choosing the donation type 'Recurring' and the billing interval set to 'Month'.
+1. Create a plan, select the **Donation** option and give it a helpful name. Choose 'One-off' type.
+2. Create a second plan, select the **Donation** option and give it a helpful name. This time, choosing the 'Recurring' type and set billing interval to 'Month'.
 
-Once you have your plans, copy the links to these plans and update the values inside the `./siteConfig.js` file. This will launch your plans when your visitors choose to donate.
+Once you have your plans, copy the links to these plans and update the values inside `./siteConfig.js`.
 
 *\*We take a small fee for each transaction, [view our pricing](https://payhere.co/pricing/) for more info.*
 
 ## CMS setup
 
-We use [sanity.io](https://www.sanity.io/) for the content management system. We have the sanity project fully configured and ready to go.
+We use [sanity.io](https://www.sanity.io/) for the content management system. We have the sanity studio configured and ready to go, you just need to set it up in within your own sanity account following the steps below.
 
 ```sh
-# Install sanity.io command line tools
+# Make sure you have the sanity.io command line tools installed
 $ npm install -g @sanity/cli
 ```
 
@@ -56,7 +56,7 @@ $ sanity graphql deploy
 $ sanity deploy
 ```
 
-Once you have deployed your sanity site, you’ll need the api projectId, you can find it inside of `./cms/sanity.json`, take this value and update the `./siteConfig.js` file with your sanity project ID, this will start fetching CMS content from your own sanity CMS.
+Once you have deployed your sanity studio, you’ll need the api projectId, you can find it inside of `./cms/sanity.json`, take this value and update the `./siteConfig.js` file with your sanity project ID, this will start fetching CMS content from your own sanity CMS.
 
 ## Deploy
 
