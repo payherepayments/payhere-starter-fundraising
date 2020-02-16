@@ -2,7 +2,7 @@ module.exports = {
   name: 'My fundraising page',
   shortName: 'Fundraising',
   description: 'Help me raise funds for my project',
-  url: 'https://my-fundraising-page.netlify.com', // Domain of your site without prefix!
+  url: 'https://fundraising.now.sh', // Domain of your site without prefix!
   prefix: '/',
   author: '@peteyhawkins',
   twitter: '@PayHerePayments',

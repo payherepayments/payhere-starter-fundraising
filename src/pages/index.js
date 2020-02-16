@@ -29,12 +29,13 @@ export const pageQuery = graphql`
           }
         }
       }
+      thanks
     }
   }
 `
 
 const IndexPage = ({ data }) => {
-  const { title, author, avatar, mainImage, _rawBody } = data.sanitySiteContent
+  const { title, author, avatar, mainImage, _rawBody, thanks } = data.sanitySiteContent
   const [amount, setAmount] = useState(null)
   const [recurring, setRecurring] = useState(false)
   const [showPayhere, setShowPayhere] = useState(false)
@@ -60,7 +61,7 @@ const IndexPage = ({ data }) => {
       />
       {success ?
         <div className="px-4 py-8 rounded-lg border-2 border-green-500 text-green-500 text-white text-center">
-          <h2 className="text-xl font-semibold">Thanks for your support!</h2>
+          <h2 className="text-xl font-semibold">{thanks}</h2>
         </div>
       :
         <div>
