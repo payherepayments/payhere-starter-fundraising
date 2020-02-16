@@ -1,6 +1,6 @@
 # Payhere fundraising starter
 
-A funraising website, built using [Gatsby](https://www.gatsbyjs.org) and [Paynere](https://payhere.co). It allows you to easily create a nice, mobile-optimised website and be collecting one-off and recurring donations.
+A funraising website, built using [Gatsby](https://www.gatsbyjs.org), [Paynere](https://payhere.co) and [Sanity.io](https://www.sanity.io/). It allows you to easily create a nice, mobile-optimised website and collect one-off and recurring donations for your charity or funraising event.
 
 [Live demo](https://fundraising.now.sh/)
 
@@ -42,13 +42,21 @@ We use [sanity.io](https://www.sanity.io/) for the content management system. We
 ```sh
 # Install sanity.io command line tools
 $ npm install -g @sanity/cli
-$ cd cms
-$ sanity deploy
-# Deploy graphql endpoint (required for gatsby-source-sanity)
-$ sanity graphql deploy
 ```
 
-Once you have deployed your sanity site, you’ll need the project ID, you can find it inside of `./cms/sanity.json`. Next update the `./siteConfig.js` file with your sanity project ID.
+From within the `cms/` folder you will want to initialise a new sanity project tied to your account that you login and make changes with. When prompted `Would you like to reconfigure` select `Y` and create a new sanity project, choosing to use the default dataset configuration.
+
+```sh
+$ cd cms
+# Initialize sanity project
+$ sanity init
+# Deploy graphql endpoint (required for gatsby-source-sanity)
+$ sanity graphql deploy
+# Deploy your CMS to <project-name>.sanity.studio
+$ sanity deploy
+```
+
+Once you have deployed your sanity site, you’ll need the api projectId, you can find it inside of `./cms/sanity.json`, take this value and update the `./siteConfig.js` file with your sanity project ID, this will start fetching CMS content from your own sanity CMS.
 
 ## Deploy
 

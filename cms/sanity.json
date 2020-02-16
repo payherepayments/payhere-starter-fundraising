@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "Fundraising starter"
-  },
   "api": {
     "projectId": "0ewososi",
     "dataset": "production"
+  },
+  "project": {
+    "name": "Fundraising starter"
   },
   "plugins": [
     "@sanity/base",
