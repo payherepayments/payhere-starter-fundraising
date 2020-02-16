@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
         {amount && !validAmount &&
           <span className="block my-3 text-red-500">Please give at least $1</span>
         }
-        <label className="flex my-4 items-center text-lg" htmlFor="recurring-donation">
+        <label className="flex mt-4 items-center text-lg" htmlFor="recurring-donation">
           <input
             id="recurring-donation"
             type="checkbox"
@@ -75,7 +75,7 @@ const IndexPage = ({ data }) => {
         </label>
         { validAmount ?
           <button
-            className="w-full bg-green-500 text-white font-semibold uppercase tracking-wider p-4 text-lg outline-none"
+            className="mt-6 w-full bg-green-500 text-white font-semibold uppercase tracking-wider p-4 text-lg outline-none"
             onClick={() => {
               setShowPayhere(true)
             }}
