@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const AmountPicker = ({ value, onChange }) => {
+const AmountPicker = ({ value, onChange, symbol }) => {
   const [showOther, setShowOther] = useState(false)
 
   const activeClass = "bg-green-400 text-white font-semibold"
@@ -9,34 +9,42 @@ const AmountPicker = ({ value, onChange }) => {
     <>
       <div className="flex border border-gray-300">
         <div
-          className={`cursor-pointer p-4 text-lg border-r border-gray-300 ${value === 10 ? activeClass : ''}`}
+          className={`cursor-pointer p-4 text-lg border-r border-gray-300 ${
+            value === 10 ? activeClass : ""
+          }`}
           onClick={() => {
             onChange(10)
             setShowOther(false)
           }}
         >
-          $10
+          {symbol}10
         </div>
         <div
-          className={`cursor-pointer p-4 text-lg border-r border-gray-300 ${value === 20 ? activeClass : ''}`}
+          className={`cursor-pointer p-4 text-lg border-r border-gray-300 ${
+            value === 20 ? activeClass : ""
+          }`}
           onClick={() => {
             onChange(20)
             setShowOther(false)
           }}
         >
-          $20
+          {symbol}20
         </div>
         <div
-          className={`cursor-pointer p-4 text-lg border-r border-gray-300 ${value === 30 ? activeClass : ''}`}
+          className={`cursor-pointer p-4 text-lg border-r border-gray-300 ${
+            value === 30 ? activeClass : ""
+          }`}
           onClick={() => {
             onChange(30)
             setShowOther(false)
           }}
         >
-          $30
+          {symbol}30
         </div>
         <div
-          className={`cursor-pointer p-4 text-lg ${showOther ? activeClass : ''}`}
+          className={`cursor-pointer p-4 text-lg ${
+            showOther ? activeClass : ""
+          }`}
           onClick={() => {
             onChange("")
             setShowOther(true)
@@ -45,9 +53,9 @@ const AmountPicker = ({ value, onChange }) => {
           Other
         </div>
       </div>
-      {showOther &&
+      {showOther && (
         <div className="flex border-b border-l border-r border-gray-300">
-          <span className="p-4">$</span>
+          <span className="p-4">{symbol}</span>
           <input
             className="pr-4 pb-4 pt-4 pl-1 outline-none flex-1"
             type="number"
@@ -58,7 +66,7 @@ const AmountPicker = ({ value, onChange }) => {
             onChange={e => onChange(e.target.value)}
           />
         </div>
-      }
+      )}
     </>
   )
 }
