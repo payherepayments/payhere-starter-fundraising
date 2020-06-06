@@ -16,7 +16,7 @@ module.exports = {
       resolve: `gatsby-source-sanity`,
       options: {
         projectId: siteConfig.sanitySiteId,
-        dataset: siteConfig.sanityDataset
+        dataset: siteConfig.sanityDataset,
       },
     },
     `gatsby-transformer-sharp`,
@@ -59,9 +59,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-portal`,
       options: {
-        key: 'payhere-modal',
-        id: 'payhere-modal',
+        key: "payhere-modal",
+        id: "payhere-modal",
       },
-    }
-  ]
+    },
+  ],
 }
