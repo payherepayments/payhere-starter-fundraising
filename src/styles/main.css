@@ -3,3 +3,12 @@
 @import "components/sanity-content.css";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.sanity-content a {
+  text-decoration: underline;
+}
+
+.sanity-content a:hover {
+  text-decoration: none;
+  color: #121212;
+}

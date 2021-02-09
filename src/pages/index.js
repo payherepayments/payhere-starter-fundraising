@@ -44,8 +44,8 @@ const IndexPage = ({ data }) => {
     thanks,
   } = data.sanitySiteContent
   const [amount, setAmount] = useState(null)
-  const [currency, setCurrency] = useState("USD")
-  const [recurring, setRecurring] = useState(false)
+  const [currency, setCurrency] = useState("GBP")
+  const [recurring, setRecurring] = useState(true)
   const [showPayhere, setShowPayhere] = useState(false)
   const [success, setSuccess] = useState(false)
 
@@ -54,7 +54,6 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout mainImage={mainImage}>
-      <h1 className="font-semibold text-3xl text-gray-800 mb-4">{title}</h1>
       <div className="flex items-center mb-8">
         <Img
           fixed={avatar.asset.fixed}
@@ -63,6 +62,9 @@ const IndexPage = ({ data }) => {
         />
         <span className="font-semibold text-lg">{author}</span>
       </div>
+      <h1 className="font-semibold text-2xl md:text-3xl text-gray-800 mb-4">
+        {title}
+      </h1>
       <BlockContent
         className="sanity-content leading-relaxed text-lg mb-8"
         blocks={_rawBody}
@@ -71,7 +73,7 @@ const IndexPage = ({ data }) => {
         dataset={siteConfig.sanityDataset}
       />
       {success ? (
-        <div className="px-4 py-8 rounded-lg border-2 border-green-500 text-green-500 text-white text-center">
+        <div className="px-4 py-8 rounded-lg border-2 border-green-500 text-green-500 text-center">
           <h2 className="text-xl font-semibold">{thanks}</h2>
         </div>
       ) : (
@@ -80,21 +82,21 @@ const IndexPage = ({ data }) => {
             <span className="mr-3">Currency</span>
             <input
               type="radio"
-              id="dollars"
-              checked={currency === "USD"}
-              onChange={() => setCurrency("USD")}
-            />
-            <label htmlFor="dollars" className="ml-1 mr-3">
-              $ Dollars
-            </label>
-            <input
-              type="radio"
               id="pounds"
               checked={currency === "GBP"}
               onChange={() => setCurrency("GBP")}
             />
             <label htmlFor="pounds" className="ml-1 mr-3">
               £ Pounds
+            </label>
+            <input
+              type="radio"
+              id="dollars"
+              checked={currency === "USD"}
+              onChange={() => setCurrency("USD")}
+            />
+            <label htmlFor="dollars" className="ml-1 mr-3">
+              $ Dollars
             </label>
           </div>
           <AmountPicker value={amount} onChange={setAmount} symbol={symbol} />
@@ -118,7 +120,7 @@ const IndexPage = ({ data }) => {
           </label>
           {validAmount ? (
             <button
-              className="mt-6 w-full bg-green-500 text-white font-semibold uppercase tracking-wider p-4 text-lg outline-none"
+              className="mt-6 w-full bg-purple-700 text-white font-semibold uppercase tracking-wider p-4 text-lg outline-none"
               onClick={() => {
                 setShowPayhere(true)
               }}
@@ -128,8 +130,8 @@ const IndexPage = ({ data }) => {
               {recurring && ` per month`}
             </button>
           ) : (
-            <div className="mt-6 w-full bg-green-300 text-white font-semibold text-center uppercase tracking-wider p-4 text-lg">
-              Select donation amount
+            <div className="mt-6 w-full bg-purple-300 text-white font-semibold text-center uppercase tracking-wider p-4 text-lg">
+              Select an amount to give
             </div>
           )}
         </div>

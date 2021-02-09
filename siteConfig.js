@@ -9,9 +9,9 @@ module.exports = {
 
   // Payhere plan URLs
   payherePlanURLoneOff:
-    "https://sandbox.payhere.co/payhere-examples/charity-run-be89d5ab-731b-4e51-a750-34d3faca63d9",
+    "https://sandbox.payhere.co/payhere-examples/one-off-gbp",
   payherePlanURLmonthly:
-    "https://sandbox.payhere.co/payhere-examples/charity-run-monthly",
+    "https://sandbox.payhere.co/payhere-examples/donate-monthly-gbp",
   payherePlanURLoneOffUSD:
     "https://sandbox.payhere.co/payhere-examples/charity-run-be89d5ab-731b-4e51-a750-34d3faca63d9",
   payherePlanURLmonthlyUSD:

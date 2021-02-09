@@ -3,7 +3,7 @@ import React, { useState } from "react"
 const AmountPicker = ({ value, onChange, symbol }) => {
   const [showOther, setShowOther] = useState(false)
 
-  const activeClass = "bg-green-400 text-white font-semibold"
+  const activeClass = "bg-purple-700 text-white font-semibold"
 
   return (
     <>
